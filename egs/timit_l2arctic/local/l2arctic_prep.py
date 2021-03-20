@@ -71,7 +71,9 @@ for phn_path in wav_lst:
                     cur_phns.append("sil")
                 else:
                     phn = phn.strip(" ")
-                    if(phn == "ERR" or phn == "err" or phn == "ER)"):
+                    if(phn == "ERR" or phn == "err"):
+                        cur_phns.append("err")
+                    elif(phn == "ER)"):
                         cur_phns.append("er")
                     elif(phn == "AX" or phn == "ax" or phn == "AH)"):
                         cur_phns.append("ah")
@@ -87,7 +89,9 @@ for phn_path in wav_lst:
                     transcript_phns.append(("sil"))
                 else:
                     trans_phn = trans_phn.strip(" ")
-                    if(trans_phn == "ERR" or trans_phn == "err" or trans_phn == "ER)"):
+                    if(trans_phn == "ERR" or trans_phn == "err"):
+                        transcript_phns.append("err")
+                    elif(trans_phn == "ER)"):
                         transcript_phns.append("er")
                     elif(trans_phn == "AX" or trans_phn == "ax" or trans_phn == "AH)"):
                         transcript_phns.append("ah")
