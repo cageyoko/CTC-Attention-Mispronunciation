@@ -1,5 +1,4 @@
-A end-to-end toolkit
-
+Text-mdd
 current examples
 - Timit ASR
 - Timit+L2-Arctic CTC  Mispronunciation detection
