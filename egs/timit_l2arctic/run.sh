@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #Author: Kaiqi Fu, JinHong Lin
-. path.sh
+./path.sh
 
-stage=-1
+stage=2
 
 
 
 l2arctic_dir="/home/ljh/data/L2-Arctic/data" 
-timit_dir='/bigdata/DB_PUBLIC/udisk/timit'
+timit_dir='/home/ljh/data/timit'
 phoneme_map='60-39'
 feat_dir='data'                            #dir to save feature
 feat_type='fbank'                          #fbank, mfcc, spectrogram
@@ -30,8 +30,8 @@ if [ $stage -le 0 ]; then
     local/timit_l2_merge.sh ${feat_dir}/train_timit ${feat_dir}/l2_train ${feat_dir}/train
     rm -rf l2_train train_timit
 
-    python3 steps/get_model_units.py $feat_dir/train_timit/phn_text
-    exit 1;
+    python3 steps/get_model_units.py $feat_dir/train/phn_text
+#    exit 1;
 fi
 if [ $stage -le 1 ]; then
     echo "Step 1: Feature Extraction..."
@@ -39,7 +39,7 @@ if [ $stage -le 1 ]; then
 fi
 if [ $stage -le 2 ]; then
     echo "Step 2: Acoustic Model(CTC) Training..."
-    CUDA_VISIBLE_DEVICE='0' python3 steps/train_ctc.py --conf $config_file || exit 1;
+    CUDA_VISIBLE_DEVICE='1' python3 steps/train_ctc.py --conf $config_file || exit 1;
 fi
 
 

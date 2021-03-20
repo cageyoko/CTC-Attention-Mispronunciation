@@ -82,7 +82,7 @@ def main(conf):
         setattr(opts, k, v)
         print('{:50}:{}'.format(k, v))
 
-    device = torch.device('cuda:0') if opts.use_gpu else torch.device('cpu')
+    device = torch.device('cuda:1') if opts.use_gpu else torch.device('cpu')
     torch.manual_seed(opts.seed)
     np.random.seed(opts.seed)
     if opts.use_gpu:

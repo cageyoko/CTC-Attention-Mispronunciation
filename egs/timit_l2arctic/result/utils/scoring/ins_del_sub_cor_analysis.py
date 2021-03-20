@@ -192,25 +192,25 @@ for i in dic:
 
 sum1 = cor_cor + cor_nocor + sub_sub + sub_sub1 + sub_nosub + ins_ins + ins_ins1 + ins_noins + del_del + del_del1 + del_nodel  
 print("sum:",sum1)
-TP = sub_sub + ins_ins + del_del + sub_sub1 + ins_ins1 + del_del1
-FP = cor_nocor
-FN = sub_nosub + ins_noins + del_nodel
-
-recall = TP/(TP+FN)
-precision = TP/(TP+FP)
-print("Recall: %.4f" %(TP/(TP+FN)))
-print("Precision: %.4f" %(TP/(TP+FP)))
+TR = sub_sub + ins_ins + del_del + sub_sub1 + ins_ins1 + del_del1
+FR = cor_nocor
+FA = sub_nosub + ins_noins + del_nodel
+TA = cor_cor 
+recall = TR/(TR+FA)
+precision = TR/(TR+FR)
+print("Recall: %.4f" %(recall))
+print("Precision: %.4f" %(precision))
 print("f1:%.4f" % ( 2*precision*recall/(recall+precision)  ))
 
-print("TA: %.4f %d" %(cor_cor/(cor_cor+cor_nocor), cor_cor))
-print("FR: %.4f %d" %(cor_nocor/(cor_cor+cor_nocor), cor_nocor))
+print("TA: %.4f %d" %(cor_cor/(cor_cor+cor_nocor), TA))
+print("FR: %.4f %d" %(cor_nocor/(cor_cor+cor_nocor), FR))
 err_count = sub_sub+sub_sub1+sub_nosub+ins_ins+ins_ins1+ins_noins+del_del+del_del1+del_nodel
 false_accept = sub_nosub + ins_noins + del_nodel
 Correct_Diag = sub_sub + ins_ins + del_del
 Error_Diag =  sub_sub1 + ins_ins1 + del_del1
 print("FA: %.4f %d" %(false_accept/err_count, false_accept))
-print("Correct Diag: %.4f %d" %(Correct_Diag/err_count, Correct_Diag))
-print("Error Diag: %.4f %d" %(Error_Diag/err_count, Error_Diag))
+print("Correct Diag: %.4f %d" %(Correct_Diag/(Correct_Diag+Error_Diag), Correct_Diag))
+print("Error Diag: %.4f %d" %(Error_Diag/(Correct_Diag+Error_Diag), Error_Diag))
 FAR = 1-recall
 FRR = cor_nocor/(cor_nocor+cor_cor)
 DER = Error_Diag / (Error_Diag + Correct_Diag)

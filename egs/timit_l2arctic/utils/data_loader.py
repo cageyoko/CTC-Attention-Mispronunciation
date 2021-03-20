@@ -98,7 +98,7 @@ class SpeechDataset(Dataset):
                 utt, trans = line.strip().split(' ', 1)
                 trans_dict[utt] = [self.vocab.word2index[c] if c in self.vocab.word2index else self.vocab.word2index['UNK'] for c in trans.split()]
                 line = rf.readline() 
-        
+        #print(len(path_dict),len(label_dict))
         assert len(path_dict) == len(label_dict)
         print("Reading %d lines from %s" % (len(label_dict), self.lab_path))
         
