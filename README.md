@@ -1,10 +1,9 @@
-Text-mdd
-current examples
-- Timit ASR
-- Timit+L2-Arctic CTC  Mispronunciation detection
-- Timit+L2-Arctic CTC+Attention Mispronunciation detection
+A Full Text-Dependent End to End Mispronunciation Detection and Diagnosis with Easy Data Augment Techniques
 
-Data augment method option:
-- Skip 
-- Stack
-- Time and Frequency mask
+
+Implemented with TIMIT and L2-Arctic Database:
+
+TIMIT : 
+L2-Arctic: (https://psi.engr.tamu.edu/l2-arctic-corpus/)
+
+Usage:
