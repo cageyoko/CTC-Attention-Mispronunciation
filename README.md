@@ -3,7 +3,8 @@ A Full Text-Dependent End to End Mispronunciation Detection and Diagnosis with E
 
 Implemented with TIMIT and L2-Arctic Database:
 
-TIMIT : 
+TIMIT :  -
 L2-Arctic: (https://psi.engr.tamu.edu/l2-arctic-corpus/)
 
-Usage:
+
+Usage: ./run.sh 
