@@ -7,6 +7,7 @@ TIMIT :  -
 L2-Arctic: (https://psi.engr.tamu.edu/l2-arctic-corpus/)
 
 
-Usage: 1. ./run.sh  get the decode sequence (decode_seq)
-       2. mv decode_seq ./result/hyp
-          ./mdd_result.sh
+Usage: 
+1. ./run.sh  get the decode sequence (decode_seq)
+2. mv decode_seq ./result/hyp
+   ./mdd_result.sh
