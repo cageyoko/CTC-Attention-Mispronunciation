@@ -1,5 +1,5 @@
 “A Full Text-Dependent End to End Mispronunciation Detection and Diagnosis with Easy Data Augment Techniques“
-
+https://arxiv.org/pdf/2104.08428.pdf
 
 Implemented with TIMIT and L2-Arctic Database:
 
