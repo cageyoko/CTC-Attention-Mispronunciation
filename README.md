@@ -3,10 +3,11 @@ https://arxiv.org/pdf/2104.08428.pdf
 
 Implemented with TIMIT and L2-Arctic Database:
 
-TIMIT :  -
+TIMIT :  -  
 L2-Arctic: (https://psi.engr.tamu.edu/l2-arctic-corpus/)
 
-CNN-RNN-CTC is baseline.
+Note:  
+CNN-RNN-CTC is baseline.  
 attention_aug is our best system.
 
 Usage: 
