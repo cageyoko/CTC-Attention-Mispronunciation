@@ -6,6 +6,8 @@ Implemented with TIMIT and L2-Arctic Database:
 TIMIT :  -
 L2-Arctic: (https://psi.engr.tamu.edu/l2-arctic-corpus/)
 
+CNN-RNN-CTC is baseline.
+attention_aug is our best system.
 
 Usage: 
 1. ./run.sh  get the decode sequence (decode_seq)
