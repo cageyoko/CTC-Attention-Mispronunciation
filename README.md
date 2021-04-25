@@ -11,6 +11,7 @@ CNN-RNN-CTC is baseline.
 attention_aug is our best system.
 
 Usage: 
-1. ./run.sh  get the decode sequence (decode_seq)
-2. mv decode_seq ./result/hyp
+1. Just need to change your kaldi_path in path.sh and your data_path in run.sh
+2. ./run.sh  to get the decode sequence (decode_seq)
+3. mv decode_seq ./result/hyp
    ./mdd_result.sh
