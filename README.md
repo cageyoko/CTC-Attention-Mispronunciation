@@ -15,3 +15,7 @@ Usage:
 2. ./run.sh  to get the decode sequence (decode_seq)
 3. mv decode_seq ./result/hyp
    ./mdd_result.sh
+
+
+Next step:
+We will update the results on large datasets (such as Librispeech)
